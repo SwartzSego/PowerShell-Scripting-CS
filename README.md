@@ -655,8 +655,8 @@ powershell -ep bypass # execution policy bypass eder
 Start-Process -NoNewWindow
 powershell -NoLogo
 powershell -noninteractive
-
-
+Start-Process powershell -Verb RunAs -> admin olarak powershell çalıştırır
+Start-Process powershell -ArgumentList "-NoExit", "-Command","Get-LocalGroup" -> powershell -NoExit -Command Get-LocalGroup komutuna eşdeğerdir bir processi çalıştırırken string olarak argüman verebiliriz.
 
 
 ÖNEMLİ CMDLET
