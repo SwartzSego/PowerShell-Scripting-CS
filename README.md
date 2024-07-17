@@ -652,8 +652,9 @@ powershell -c -enc veya -encodedcommand  # Base64 encoded komut çalıştırma
 powershell -w 1 veya -windowstyle hidden
 powershell -nop veya noprofile # No profile olarak başlatır
 powershell -ep bypass # execution policy bypass eder
-powershell -NoNewWindow
+Start-Process -NoNewWindow
 powershell -NoLogo
+powershell -noninteractive
 
 
 
