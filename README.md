@@ -706,6 +706,9 @@ Start-Service # Servis başlatır
 Start-Process # Bir işlem başlatır
 Stop-Process # Bir işlemi durdurur
 Select-Object # Linux Select ile aynı bir objeyi filtrelememizi sağlar
+Set-DnsClientServerAddress -InterfaceAlias "eth0" -ServerAddresses ('8.8.8.8','1.1.1.1') # DNS SUNUCULARINI DEGISTIRME
+Get-DnsClientServerAddress -InterfaceAlias 'eth0' # DNS SUNUCULARINI Listeler
+
 ___________________________________________________________________________________________________________
 
 WMI ORNEK > Get-WmiObject -Class Win32_PnPEntity | Select-Object Name # Bu yapı cihaz üzerinde takılı sanal ve gerçek şeylerin isimlerini gösterir.
