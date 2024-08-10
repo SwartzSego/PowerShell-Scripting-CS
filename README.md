@@ -643,6 +643,10 @@ ________________________________________________________________________________
 # Where-Object cmdletini SQL dilindeki WHERE sorgusu ile aynı işi yapar. Get-Service ile servisler listelenir ve "|" işareti ile Where-Object 'e gönderilir. Burada Name değeri wscsvc olan yakalanır ve Write-Host 'a verilir. Aslında CMDLET kullanarak bir if yapısı oluşturulur.
 PS C:\WINDOWS\system32> Get-Service | Where-Object Name -Match wscsvc | Write-Host
 wscsvc
+
+ÖRNEK;
+Get-DomainObjectAcl -ResolveGUIDs -Identity * | Where-Object {$_.SecurityIdentifier -match "S-1-5-21-3842939050-3880317879-2865463114-5614"}
+#$_ OLAN YERE BİR ÖNCEKİ SORGUNUN ÇIKTISININ GELECEĞİNİ BELİRTTİK. BU ÇIKTINUN $_.SecurityIdentifier ile sid başlığı altındaki değerini kullanacağımızı belirttik ve bunu match ile buna eşit olanları getirmesini söyledik.
 ___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 ```
 ## Powershell Bazı Önemli kullanımlar 
